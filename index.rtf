@@ -1,0 +1,769 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2865
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf0 \expnd0\expndtw0\kerning0
+@@ -0,0 +1,759 @@\
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">\
+<html>\
+<head>\
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">\
+  <meta http-equiv="Content-Style-Type" content="text/css">\
+  <title></title>\
+  <meta name="Generator" content="Cocoa HTML Writer">\
+  <meta name="CocoaVersion" content="2685.1">\
+  <style type="text/css">\
+    p.p1 \{margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica\}\
+    p.p2 \{margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px\}\
+  </style>\
+</head>\
+<body>\
+<p class="p1">&lt;!DOCTYPE html&gt;</p>\
+<p class="p1">&lt;html lang="en"&gt;</p>\
+<p class="p2"><br></p>\
+<p class="p1">&lt;head&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 </span>&lt;meta charset="UTF-8"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 </span>&lt;title&gt;CatalystPRO | AI Business Plan Presenter | BMMS Capital&lt;/title&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 </span>&lt;!-- Load Tailwind CSS --&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 </span>&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 </span>&lt;!-- Load Lucide icons --&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 </span>&lt;script src="https://unpkg.com/lucide-react@latest/dist/lucide-react.js"&gt;&lt;/script&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 </span>&lt;script&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 </span>tailwind.config = \{</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>theme: \{</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>extend: \{</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>fontFamily: \{</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>sans: ['Inter', 'sans-serif'],</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>\},</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>colors: \{</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>brand: \{</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>'light': '#F0F5FF',</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>'DEFAULT': '#0A3A90',</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>'dark': '#062254',</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>'secondary': '#FFC107',</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>\},</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>\},</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>\},</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>\},</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 </span>\}</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 </span>&lt;/script&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 </span>&lt;style&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 </span>/* Simple animation for hero text */</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 </span>@keyframes fadeIn \{</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>from \{</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>opacity: 0;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>transform: translateY(20px);</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>\}</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>to \{</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>opacity: 1;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>transform: translateY(0);</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>\}</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 </span>\}</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 </span>.fade-in \{</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>animation: fadeIn 0.8s ease-out forwards;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 </span>\}</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 </span>.fade-in-delay-1 \{ animation-delay: 0.2s; opacity: 0; \}</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 </span>.fade-in-delay-2 \{ animation-delay: 0.4s; opacity: 0; \}</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 </span>.fade-in-delay-3 \{ animation-delay: 0.6s; opacity: 0; \}</p>\
+<p class="p2"><br></p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 </span>/* Hero Video Styles */</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 </span>#heroVideo \{</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>position: absolute;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>top: 50%;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>left: 50%;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>min-width: 100%;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>min-height: 100%;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>width: auto;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>height: auto;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>z-index: 1;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>transform: translateX(-50%) translateY(-50%);</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>object-fit: cover;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 </span>\}</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 </span>.video-overlay \{</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>position: absolute;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>top: 0;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>left: 0;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>right: 0;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>bottom: 0;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>background-color: rgba(6, 34, 84, 0.7); /* 70% dark brand color overlay */</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>z-index: 2;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 </span>\}</p>\
+<p class="p2"><br></p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 </span>/* Video Modal Styles */</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 </span>.video-modal-overlay \{</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>position: fixed;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>top: 0;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>left: 0;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>right: 0;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>bottom: 0;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>background: rgba(0, 0, 0, 0.75);</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>z-index: 1000;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>backdrop-filter: blur(8px);</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 </span>\}</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 </span>.video-modal-content \{</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>position: fixed;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>top: 50%;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>left: 50%;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>transform: translate(-50%, -50%);</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>z-index: 1001;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>width: 90vw;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>max-width: 1120px;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>aspect-ratio: 16 / 9;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>background: #000;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>border-radius: 0.75rem;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>overflow: hidden;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 </span>\}</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 </span>.video-modal-close \{</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>position: absolute;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>top: -10px;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>right: -10px;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>width: 36px;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>height: 36px;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>border-radius: 50%;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>background: rgba(0, 0, 0, 0.7);</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>color: white;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>border: 2px solid white;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>font-size: 20px;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>font-weight: bold;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>line-height: 32px;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>text-align: center;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>cursor: pointer;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>z-index: 1002;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 </span>\}</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 </span>.video-modal-content video \{</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>width: 100%;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>height: 100%;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 </span>\}</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 </span>&lt;/style&gt;</p>\
+<p class="p1">&lt;/head&gt;</p>\
+<p class="p2"><br></p>\
+<p class="p1">&lt;body class="font-sans bg-gray-50 text-gray-800 antialiased"&gt;</p>\
+<p class="p2"><br></p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 </span>&lt;!-- Header --&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 </span>&lt;header class="bg-white/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 border-b border-gray-200"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 </span>&lt;nav class="container mx-auto px-6 py-4 flex justify-between items-center"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;!-- Logo --&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;div class="text-2xl font-bold text-brand-dark"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>CatalystPRO</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/div&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;!-- Navigation --&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;div class="hidden md:flex items-center space-x-6"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;a href="#features" class="text-gray-600 hover:text-brand transition-colors"&gt;Features&lt;/a&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;a href="#enterprise" class="text-gray-600 hover:text-brand transition-colors"&gt;Enterprise&lt;/a&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;a href="#pricing" class="text-gray-600 hover:text-brand transition-colors"&gt;Pricing&lt;/a&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;a href="#about" class="text-gray-600 hover:text-brand transition-colors"&gt;About&lt;/a&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/div&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;!-- CTA --&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;div class="flex items-center space-x-3"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;a href="#pricing" class="text-sm font-medium text-brand-dark hover:text-brand transition-colors"&gt;Log In&lt;/a&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;a href="#pricing" class="text-sm font-medium bg-brand-DEFAULT text-white px-5 py-2.5 rounded-lg shadow-sm hover:bg-brand-dark transition-colors"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>Start Free</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/a&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/div&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 </span>&lt;/nav&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 </span>&lt;/header&gt;</p>\
+<p class="p2"><br></p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 </span>&lt;!-- Main Content --&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 </span>&lt;main&gt;</p>\
+<p class="p2"><br></p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 </span>&lt;!-- Hero Section --&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 </span>&lt;section class="relative bg-brand-dark pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;!-- Background Video &amp; Overlay --&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;video id="heroVideo" autoplay loop muted playsinline&gt;</p>\
+<p class="p2"><span class="Apple-converted-space">\'a0\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0</span></p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;!--<span class="Apple-converted-space">\'a0</span></p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>*******************************************************************</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>* IMPORTANT: REPLACE THIS PLACEHOLDER URL<span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>*</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>* Upload your subtle, looping "startup-related" video and<span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 </span>*</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>* paste the public URL here. <span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>*</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>*******************************************************************</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>--&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;source src="https://cdn.pixabay.com/video/2020/02/03/31941-392330611_large.mp4" type="video/mp4"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>Your browser does not support the video tag.</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/video&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;div class="video-overlay"&gt;&lt;/div&gt;</p>\
+<p class="p2"><span class="Apple-converted-space">\'a0\'a0 \'a0 \'a0 \'a0 \'a0 \'a0</span></p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;!-- Hero Content --&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;div class="container mx-auto px-6 text-center relative z-10"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;!-- Headline --&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;h1 class="text-4xl md:text-6xl font-bold text-white leading-tight max-w-4xl mx-auto fade-in"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>Stop writing static plans.</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;br&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;span class="text-brand-secondary"&gt;Start building a living strategy.&lt;/span&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/h1&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;!-- Subheadline --&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;p class="mt-6 text-lg md:text-xl text-gray-200 max-w-2xl mx-auto fade-in fade-in-delay-1"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>This isn't another template. This is a conversational AI strategist, powered by 30 years of institutional expertise.</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>Speak your vision. Get your plan.</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/p&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;!-- Dual CTAs --&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;div class="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4 fade-in fade-in-delay-2"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;a href="#pricing" class="w-full sm:w-auto text-lg font-medium bg-brand-DEFAULT text-white px-8 py-4 rounded-lg shadow-lg hover:bg-brand-dark transition-all transform hover:scale-105"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>Start Your Free Plan</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/a&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;a href="#enterprise" class="w-full sm:w-auto text-lg font-medium bg-white text-brand-dark px-8 py-4 rounded-lg shadow-sm hover:bg-gray-100 transition-all transform hover:scale-105"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>Book an Enterprise Demo</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/a&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/div&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/div&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 </span>&lt;/section&gt;</p>\
+<p class="p2"><br></p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 </span>&lt;!-- \uc0\u10024  GEMINI API DEMO SECTION --&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 </span>&lt;section id="gemini-demo" class="py-20 md:py-28 bg-brand-dark text-white"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;div class="container mx-auto px-6"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;div class="text-center max-w-3xl mx-auto"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;h2 class="text-3xl md:text-4xl font-bold"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>\uc0\u10024  Spark Your Strategy</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/h2&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;p class="mt-4 text-lg text-gray-300"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>Get an instant analysis of your business idea, powered by Gemini.</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>This is a small preview of the strategic engine inside CatalystPRO.</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/p&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/div&gt;</p>\
+<p class="p2"><br></p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;!-- Input Area --&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;div class="mt-12 max-w-2xl mx-auto"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;div class="bg-white rounded-lg shadow-xl p-2 flex flex-col md:flex-row items-center gap-2"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;input type="text" id="ideaInput" class="w-full flex-grow p-3 text-gray-700 placeholder-gray-500 bg-transparent border-none rounded-lg focus:outline-none focus:ring-0" placeholder="Enter your business idea (e.g., 'Subscription box for eco-friendly dog toys')"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;button id="analyzeButton" class="w-full md:w-auto text-lg font-medium bg-brand-DEFAULT text-white px-8 py-3 rounded-lg shadow-lg hover:bg-brand-dark transition-all flex items-center justify-center space-x-2"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;svg id="analyzeIcon" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"&gt;&lt;/path&gt;&lt;polyline points="3.27 6.96 12 12.01 20.73 6.96"&gt;&lt;/polyline&gt;&lt;line x1="12" y1="22.08" x2="12" y2="12"&gt;&lt;/line&gt;&lt;/svg&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;svg id="loadingSpinner" class="animate-spin h-6 w-6 text-white hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"&gt;&lt;/circle&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"&gt;&lt;/path&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/svg&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;span id="buttonText"&gt;Analyze Idea&lt;/span&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/button&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/div&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/div&gt;</p>\
+<p class="p2"><span class="Apple-converted-space">\'a0\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0</span></p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;!-- Output Area --&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;div id="analysisOutput" class="mt-8 max-w-4xl mx-auto hidden"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;div class="grid grid-cols-1 md:grid-cols-3 gap-6"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;!-- Card 1: Target Market --&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;div class="bg-brand-light p-6 rounded-lg shadow-md"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;h3 class="text-xl font-semibold text-brand-dark"&gt;Target Market&lt;/h3&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;ul id="marketOutput" class="mt-2 list-disc list-inside text-gray-700 space-y-1"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;!-- JS will populate this --&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/ul&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/div&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;!-- Card 2: Potential Risks --&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;div class="bg-brand-light p-6 rounded-lg shadow-md"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;h3 class="text-xl font-semibold text-brand-dark"&gt;Potential Risks&lt;/h3&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;ul id="risksOutput" class="mt-2 list-disc list-inside text-gray-700 space-y-1"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;!-- JS will populate this --&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/ul&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/div&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;!-- Card 3: Value Prop --&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;div class="bg-brand-light p-6 rounded-lg shadow-md"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;h3 class="text-xl font-semibold text-brand-dark"&gt;Unique Value Prop&lt;/h3&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;ul id="valuePropOutput" class="mt-2 list-disc list-inside text-gray-700 space-y-1"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;!-- JS will populate this --&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/ul&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/div&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/div&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;p class="mt-6 text-center text-sm text-gray-400"&gt;Demo uses Gemini for instant insights. The full CatalystPRO platform is trained on our proprietary institutional models.&lt;/p&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/div&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;!-- Error Message --&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;div id="errorMessage" class="mt-8 max-w-4xl mx-auto text-center text-red-300 hidden"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;p&gt;There was an error analyzing your idea. Please try again.&lt;/p&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/div&gt;</p>\
+<p class="p2"><br></p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/div&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 </span>&lt;/section&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 </span>&lt;!-- END GEMINI API DEMO SECTION --&gt;</p>\
+<p class="p2"><br></p>\
+<p class="p2"><br></p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 </span>&lt;!-- Core Features Section --&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 </span>&lt;section id="features" class="bg-brand-light py-20 md:py-28"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;div class="container mx-auto px-6"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;div class="text-center max-w-3xl mx-auto"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;h2 class="text-3xl md:text-4xl font-bold text-brand-dark"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>Your Business Plan, Reimagined</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/h2&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;p class="mt-4 text-lg text-gray-600"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>Our platform is built on core differentiators that save you time, get you funded faster, and help you build a truly resilient business.</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/p&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/div&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;!-- Features Grid --&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;!-- Feature: Conversational AI --&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;div class="flex items-start space-x-4"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-lg bg-brand text-white"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"&gt;&lt;/path&gt;&lt;/svg&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/div&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;div&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;h3 class="text-xl font-semibold text-brand-dark"&gt;\uc0\u10024  Conversational AI&lt;/h3&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;p class="mt-1 text-gray-600"&gt;Natural language and voice-first interface. Stop filling boxes and start having a strategic conversation with our Gemini-powered AI.&lt;/p&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/div&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/div&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;!-- Feature: Adaptive Presentations --&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;div class="flex items-start space-x-4"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-lg bg-brand text-white"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;path d="m12 1 7 4-7 4-7-4 7-4z"&gt;&lt;/path&gt;&lt;path d="m5 9 7 4 7-4"&gt;&lt;/path&gt;&lt;path d="m5 17 7 4 7-4"&gt;&lt;/path&gt;&lt;/svg&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/div&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;div&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;h3 class="text-xl font-semibold text-brand-dark"&gt;\uc0\u10024  Continuous Intelligence&lt;/h3&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;p class="mt-1 text-gray-600"&gt;Your plan isn't static. Our AI monitors market news and competitor moves, alerting you to threats and opportunities.&lt;/p&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/div&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/div&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;!-- Feature: Investor Matching --&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;div class="flex items-start space-x-4"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-lg bg-brand text-white"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"&gt;&lt;/path&gt;&lt;circle cx="8.5" cy="7" r="4"&gt;&lt;/circle&gt;&lt;line x1="20" y1="8" x2="20" y2="14"&gt;&lt;/line&gt;&lt;line x1="17" y1="11" x2="23" y2="11"&gt;&lt;/line&gt;&lt;/svg&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/div&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;div&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;h3 class="text-xl font-semibold text-brand-dark"&gt;Investor Matching&lt;/h3&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;p class="mt-1 text-gray-600"&gt;Get your plan in front of the right people. Our network connects fundable plans with VCs and angel investors.&lt;/p&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/div&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/div&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;!-- Feature: Execution Tracking --&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;div class="flex items-start space-x-4"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-lg bg-brand text-white"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;path d="M20.5 14.5A7.5 7.5 0 1 0 14 21.5V14h-3"&gt;&lt;/path&gt;&lt;path d="M14 14v-3h3"&gt;&lt;/path&gt;&lt;path d="M18.5 2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z"&gt;&lt;/path&gt;&lt;/svg&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/div&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;div&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;h3 class="text-xl font-semibold text-brand-dark"&gt;Execution Tracking&lt;/h3&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;p class="mt-1 text-gray-600"&gt;A plan is useless without action. Link your plan to tasks, milestones, and KPIs to track your progress in real-time.&lt;/p&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/div&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/div&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/div&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/div&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 </span>&lt;/section&gt;</p>\
+<p class="p2"><br></p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 </span>&lt;!-- B2B / Enterprise Section --&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 </span>&lt;section id="enterprise" class="py-20 md:py-28 bg-white relative overflow-hidden"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;div class="container mx-auto px-6 relative z-10"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;!-- Text Content --&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;div&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;h2 class="text-base font-semibold text-brand uppercase tracking-wider"&gt;For Enterprise &amp; VCs&lt;/h2&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;p class="mt-2 text-3xl md:text-4xl font-bold text-brand-dark"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>The Institutional Standard for Strategic Planning</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/p&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;p class="mt-6 text-lg text-gray-600"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>Stop chasing decks. Standardize your deal flow, portfolio management, and internal strategic planning on a single, intelligent platform.</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/p&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;ul class="mt-8 space-y-4"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;li class="flex items-start space-x-3"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;svg class="flex-shrink-0 h-6 w-6 text-brand" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"&gt;&lt;/path&gt;&lt;polyline points="22 4 12 14.01 9 11.01"&gt;&lt;/polyline&gt;&lt;/svg&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;span class="text-gray-700"&gt;&lt;strong class="text-brand-dark"&gt;White-Label &amp; Custom AI:&lt;/strong&gt; Deploy as your own branded platform, trained on your proprietary data and models.&lt;/span&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/li&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;li class="flex items-start space-x-3"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;svg class="flex-shrink-0 h-6 w-6 text-brand" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"&gt;&lt;/path&gt;&lt;polyline points="22 4 12 14.01 9 11.01"&gt;&lt;/polyline&gt;&lt;/svg&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;span class="text-gray-700"&gt;&lt;strong class="text-brand-dark"&gt;Portfolio Management:&lt;/strong&gt; VCs and accelerators can manage their entire portfolio's strategy, tracking KPIs in a unified dashboard.&lt;/span&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/li&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;li class="flex items-start space-x-3"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;svg class="flex-shrink-0 h-6 w-6 text-brand" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"&gt;&lt;/path&gt;&lt;polyline points="22 4 12 14.01 9 11.01"&gt;&lt;/polyline&gt;&lt;/svg&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;span class="text-gray-700"&gt;&lt;strong class="text-brand-dark"&gt;Enterprise-Grade Security:&lt;/strong&gt; SOC 2, GDPR, and CCPA compliant. On-prem or private cloud options available.&lt;/span&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/li&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/ul&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;div class="mt-10"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;a href="#" class="text-lg font-medium bg-brand-dark text-white px-8 py-4 rounded-lg shadow-lg hover:bg-brand transition-all transform hover:scale-105"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>Request an Enterprise Demo</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/a&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/div&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/div&gt;</p>\
+<p class="p2"><span class="Apple-converted-space">\'a0\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0</span></p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;!-- About Brian / BMMS Capital Card --&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;div id="about" class="bg-brand-light p-8 md:p-10 rounded-2xl shadow-xl border border-gray-200"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;!-- MODIFIED: Replaced &lt;img&gt; with video thumbnail button --&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;button id="openVideoModal" class="relative group h-20 w-20 rounded-full bg-brand-dark text-white flex items-center justify-center transition-transform transform hover:scale-110 focus:outline-none focus:ring-4 focus:ring-brand focus:ring-opacity-50"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;!-- Placeholder Initials --&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;span class="text-3xl font-bold group-hover:opacity-0 transition-opacity"&gt;BM&lt;/span&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;!-- Play Icon --&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;svg class="h-10 w-10 absolute opacity-0 group-hover:opacity-100 transition-opacity" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" /&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/svg&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/button&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;!-- END MODIFICATION --&gt;</p>\
+<p class="p2"><br></p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;h3 class="mt-6 text-2xl font-bold text-brand-dark"&gt;The Mind Behind the Model&lt;/h3&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;p class="mt-2 text-lg font-semibold text-brand"&gt;Brian A. Martucci&lt;/p&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;p class="mt-4 text-gray-700"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>"After 30 years as a Global Managing Director at Bloomberg and CNBC, navigating crises and media transformations, I saw the need for a better way to build strategy.</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/p&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;p class="mt-3 text-gray-700"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>Most plans are dead on arrival. We built an AI strategist with the rigor of institutional finance and the speed of a global newsroom. This is the tool I wish I had."</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/p&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;p class="mt-6 font-semibold text-brand-dark"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>Need more than a platform?</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;a href="#" class="text-brand underline hover:text-brand-dark"&gt;Learn about BMMS Capital Advisory Services.&lt;/a&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/p&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/div&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/div&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/div&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 </span>&lt;/section&gt;</p>\
+<p class="p2"><br></p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 </span>&lt;!-- Pricing Section --&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 </span>&lt;section id="pricing" class="py-20 md:py-28 bg-gray-50"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;div class="container mx-auto px-6"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;div class="text-center max-w-3xl mx-auto"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;h2 class="text-3xl md:text-4xl font-bold text-brand-dark"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>The right plan for every vision</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/h2&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;p class="mt-4 text-lg text-gray-600"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>From solo founders to global enterprises. Start free, then scale as you grow.</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/p&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/div&gt;</p>\
+<p class="p2"><br></p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;div class="mt-16 grid grid-cols-1 lg:grid-cols-3 gap-8"&gt;</p>\
+<p class="p2"><span class="Apple-converted-space">\'a0\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0</span></p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;!-- Free Plan --&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;div class="bg-white p-8 rounded-2xl shadow-lg border-2 border-transparent h-full flex flex-col"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;h3 class="text-xl font-semibold text-brand-dark"&gt;Starter&lt;/h3&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;p class="mt-2 text-gray-500"&gt;For entrepreneurs validating an idea.&lt;/p&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;div class="mt-4"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;span class="text-5xl font-bold text-brand-dark"&gt;$0&lt;/span&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;span class="text-lg text-gray-500"&gt;/ forever&lt;/span&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/div&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;p class="mt-4 text-gray-600"&gt;Get your core plan built and start pitching.&lt;/p&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;ul class="mt-6 space-y-3"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;li class="flex items-center space-x-3"&gt;&lt;svg class="flex-shrink-0 h-5 w-5 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"&gt;&lt;path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /&gt;&lt;/svg&gt;&lt;span&gt;Conversational AI Planner&lt;/span&gt;&lt;/li&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;li class="flex items-center space-x-3"&gt;&lt;svg class="flex-shrink-0 h-5 w-5 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"&gt;&lt;path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /&gt;&lt;/svg&gt;&lt;span&gt;1 Business Plan&lt;/span&gt;&lt;/li&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;li class="flex items-center space-x-3"&gt;&lt;svg class="flex-shrink-0 h-5 w-5 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"&gt;&lt;path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /&gt;&lt;/svg&gt;&lt;span&gt;Standard Presentations&lt;/span&gt;&lt;/li&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/ul&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;div class="mt-auto pt-8"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;a href="#" class="w-full block text-center text-lg font-medium bg-gray-100 text-brand-dark px-8 py-3 rounded-lg hover:bg-gray-200 transition-colors"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>Start for Free</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/a&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/div&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/div&gt;</p>\
+<p class="p2"><br></p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;!-- Pro Plan (Most Popular) --&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;div class="bg-white p-8 rounded-2xl shadow-2xl border-2 border-brand h-full flex flex-col"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;div class="flex justify-between items-center"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;h3 class="text-xl font-semibold text-brand"&gt;Pro&lt;/h3&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;span class="bg-brand-light text-brand font-semibold px-3 py-1 rounded-full text-sm"&gt;Most Popular&lt;/span&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/div&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;p class="mt-2 text-gray-500"&gt;For small businesses seeking funding.&lt;/p&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;div class="mt-4"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;span class="text-5xl font-bold text-brand-dark"&gt;$79&lt;/span&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;span class="text-lg text-gray-500"&gt;/ month&lt;/span&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/div&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;p class="mt-4 text-gray-600"&gt;All Starter features, plus premium tools to grow.&lt;/p&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;ul class="mt-6 space-y-3"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;li class="flex items-center space-x-3"&gt;&lt;svg class="flex-shrink-0 h-5 w-5 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"&gt;&lt;path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /&gt;&lt;/svg&gt;&lt;span&gt;All Starter Features&lt;/span&gt;&lt;/li&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;li class="flex items-center space-x-3"&gt;&lt;svg class="flex-shrink-0 h-5 w-5 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"&gt;&lt;path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /&gt;&lt;/svg&gt;&lt;span&gt;Unlimited "Living" Plans&lt;/span&gt;&lt;/li&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;li class="flex items-center space-x-3"&gt;&lt;svg class="flex-shrink-0 h-5 w-5 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"&gt;&lt;path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /&gt;&lt;/svg&gt;&lt;span&gt;Adaptive Presentations&lt;/span&gt;&lt;/li&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;li class="flex items-center space-x-3"&gt;&lt;svg class="flex-shrink-0 h-5 w-5 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"&gt;&lt;path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /&gt;&lt;/svg&gt;&lt;span&gt;Scenario Planning&lt;/span&gt;&lt;/li&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;li class="flex items-center space-x-3"&gt;&lt;svg class="flex-shrink-0 h-5 w-5 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"&gt;&lt;path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /&gt;&lt;/svg&gt;&lt;span&gt;Investor Matching Network&lt;/span&gt;&lt;/li&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/ul&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;div class="mt-auto pt-8"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;a href="#" class="w-full block text-center text-lg font-medium bg-brand text-white px-8 py-3 rounded-lg shadow-md hover:bg-brand-dark transition-colors"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>Start 14-Day Free Trial</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/a&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/div&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/div&gt;</p>\
+<p class="p2"><br></p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;!-- Enterprise Plan --&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;div class="bg-brand-dark p-8 rounded-2xl shadow-lg border-2 border-transparent h-full flex flex-col"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;h3 class="text-xl font-semibold text-white"&gt;Enterprise&lt;/h3&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;p class="mt-2 text-gray-300"&gt;For VCs, accelerators, and teams.&lt;/p&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;div class="mt-4"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;span class="text-5xl font-bold text-white"&gt;Custom&lt;/span&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/div&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;p class="mt-4 text-gray-300"&gt;Scale, security, and strategy for your organization.&lt;/p&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;ul class="mt-6 space-y-3"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;li class="flex items-center space-x-3"&gt;&lt;svg class="flex-shrink-0 h-5 w-5 text-green-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"&gt;&lt;path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /&gt;&lt;/svg&gt;&lt;span class="text-gray-200"&gt;All Pro Features&lt;/span&gt;&lt;/li&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;li class="flex items-center space-x-3"&gt;&lt;svg class="flex-shrink-0 h-5 w-5 text-green-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"&gt;&lt;path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /&gt;&lt;/svg&gt;&lt;span class="text-gray-200"&gt;White-Label Platform&lt;/span&gt;&lt;/li&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;li class="flex items-center space-x-3"&gt;&lt;svg class="flex-shrink-0 h-5 w-5 text-green-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"&gt;&lt;path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /&gt;&lt;/svg&gt;&lt;span class="text-gray-200"&gt;Portfolio Management Tools&lt;/span&gt;&lt;/li&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;li class="flex items-center space-x-3"&gt;&lt;svg class="flex-shrink-0 h-5 w-5 text-green-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"&gt;&lt;path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /&gt;&lt;/svg&gt;&lt;span class="text-gray-200"&gt;Dedicated Support &amp; Onboarding&lt;/span&gt;&lt;/li&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;li class="flex items-center space-x-3"&gt;&lt;svg class="flex-shrink-0 h-5 w-5 text-green-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"&gt;&lt;path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /&gt;&lt;/svg&gt;&lt;span class="text-gray-200"&gt;Optional BMMS Capital Advisory&lt;/span&gt;&lt;/li&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/ul&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;div class="mt-auto pt-8"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;a href="#" class="w-full block text-center text-lg font-medium bg-white text-brand-dark px-8 py-3 rounded-lg hover:bg-gray-200 transition-colors"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>Contact Sales</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/a&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/div&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/div&gt;</p>\
+<p class="p2"><br></p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/div&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/div&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 </span>&lt;/section&gt;</p>\
+<p class="p2"><br></p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 </span>&lt;/main&gt;</p>\
+<p class="p2"><br></p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 </span>&lt;!-- Footer --&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 </span>&lt;footer class="bg-brand-dark text-white"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 </span>&lt;div class="container mx-auto px-6 py-12"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;div class="grid grid-cols-2 md:grid-cols-4 gap-8"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;!-- Logo &amp; Brand --&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;div&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;h3 class="text-xl font-bold"&gt;CatalystPRO&lt;/h3&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;p class="mt-2 text-gray-300 text-sm"&gt;A BMMS Capital Company&lt;/p&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;p class="mt-4 text-gray-400 text-sm"&gt;&amp;copy; 2025 BMMS Capital LLC. &lt;br&gt;All rights reserved.&lt;/p&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/div&gt;</p>\
+<p class="p2"><span class="Apple-converted-space">\'a0\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0</span></p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;!-- Product Links --&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;div&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;h4 class="font-semibold tracking-wider uppercase text-gray-200"&gt;Product&lt;/h4&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;ul class="mt-4 space-y-2"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;li&gt;&lt;a href="#features" class="text-gray-300 hover:text-white transition-colors text-sm"&gt;Features&lt;/a&gt;&lt;/li&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;li&gt;&lt;a href="#pricing" class="text-gray-300 hover:text-white transition-colors text-sm"&gt;Pricing&lt;/a&gt;&lt;/li&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;li&gt;&lt;a href="#enterprise" class="text-gray-300 hover:text-white transition-colors text-sm"&gt;Enterprise&lt;/a&gt;&lt;/li&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;li&gt;&lt;a href="#" class="text-gray-300 hover:text-white transition-colors text-sm"&gt;Log In&lt;/a&gt;&lt;/li&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/ul&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/div&gt;</p>\
+<p class="p2"><span class="Apple-converted-space">\'a0\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0</span></p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;!-- Company Links --&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;div&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;h4 class="font-semibold tracking-wider uppercase text-gray-200"&gt;Company&lt;/h4&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;ul class="mt-4 space-y-2"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;li&gt;&lt;a href="#about" class="text-gray-300 hover:text-white transition-colors text-sm"&gt;About&lt;/a&gt;&lt;/li&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;li&gt;&lt;a href="#" class="text-gray-300 hover:text-white transition-colors text-sm"&gt;BMMS Capital Advisory&lt;/a&gt;&lt;/li&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;li&gt;&lt;a href="#" class="text-gray-300 hover:text-white transition-colors text-sm"&gt;Careers&lt;/a&gt;&lt;/li&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/ul&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/div&gt;</p>\
+<p class="p2"><br></p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;!-- Legal Links --&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;div&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;h4 class="font-semibold tracking-wider uppercase text-gray-200"&gt;Legal&lt;/h4&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;ul class="mt-4 space-y-2"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;li&gt;&lt;a href="#" class="text-gray-300 hover:text-white transition-colors text-sm"&gt;Privacy Policy&lt;/a&gt;&lt;/li&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;li&gt;&lt;a href="#" class="text-gray-300 hover:text-white transition-colors text-sm"&gt;Terms of Service&lt;/a&gt;&lt;/li&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;li&gt;&lt;a href="#" class="text-gray-300 hover:text-white transition-colors text-sm"&gt;Security&lt;/a&gt;&lt;/li&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/ul&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/div&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/div&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 </span>&lt;/div&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 </span>&lt;/footer&gt;</p>\
+<p class="p2"><br></p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 </span>&lt;!-- ADDED: Video Modal HTML --&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 </span>&lt;div id="videoModal" class="hidden"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 </span>&lt;div id="videoModalOverlay" class="video-modal-overlay"&gt;&lt;/div&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 </span>&lt;div class="video-modal-content"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;button id="closeVideoModal" class="video-modal-close"&gt;&amp;times;&lt;/button&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;video id="modalVideo" controls playsinline&gt;</p>\
+<p class="p2"><br></p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;!--<span class="Apple-converted-space">\'a0</span></p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>*******************************************************************</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>* IMPORTANT: REPLACE THIS PLACEHOLDER URL<span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>*</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>* Upload your 'BMMS__AI_Transformation.mp4' video and<span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 </span>*</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>* paste the public URL here. <span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>*</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>*******************************************************************</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>--&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;source src="https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4"&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>Your browser does not support the video tag.</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>&lt;/video&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 </span>&lt;/div&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 </span>&lt;/div&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 </span>&lt;!-- END VIDEO MODAL --&gt;</p>\
+<p class="p2"><br></p>\
+<p class="p2"><br></p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 </span>&lt;!-- Gemini API Script --&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 </span>&lt;script&gt;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 </span>document.addEventListener('DOMContentLoaded', () =&gt; \{</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>const ideaInput = document.getElementById('ideaInput');</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>const analyzeButton = document.getElementById('analyzeButton');</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>const analysisOutput = document.getElementById('analysisOutput');</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>const marketOutput = document.getElementById('marketOutput');</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>const risksOutput = document.getElementById('risksOutput');</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>const valuePropOutput = document.getElementById('valuePropOutput');</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>const errorMessage = document.getElementById('errorMessage');</p>\
+<p class="p2"><span class="Apple-converted-space">\'a0\'a0 \'a0 \'a0 \'a0 \'a0 \'a0</span></p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>// Loading state elements</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>const loadingSpinner = document.getElementById('loadingSpinner');</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>const analyzeIcon = document.getElementById('analyzeIcon');</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>const buttonText = document.getElementById('buttonText');</p>\
+<p class="p2"><br></p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>// --- ADDED: Video Modal Logic ---</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>const openVideoModal = document.getElementById('openVideoModal');</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>const videoModal = document.getElementById('videoModal');</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>const videoModalOverlay = document.getElementById('videoModalOverlay');</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>const closeVideoModal = document.getElementById('closeVideoModal');</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>const modalVideo = document.getElementById('modalVideo');</p>\
+<p class="p2"><span class="Apple-converted-space">\'a0\'a0 \'a0 \'a0 \'a0 \'a0 \'a0</span></p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>// --- IMPORTANT ---</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>// This 'hostedVideoUrl' variable must be updated.</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>// Replace this placeholder with the public URL where you've hosted your</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>// 'BMMS__AI_Transformation.mp4' video (e.g., on Vimeo, YouTube, or a CDN).</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>const hostedVideoUrl = "https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4";</p>\
+<p class="p2"><br></p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>const openModal = () =&gt; \{</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>modalVideo.src = hostedVideoUrl;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>videoModal.classList.remove('hidden');</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>modalVideo.play();</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>\};</p>\
+<p class="p2"><br></p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>const closeModal = () =&gt; \{</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>videoModal.classList.add('hidden');</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>modalVideo.pause();</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>modalVideo.src = ""; // Stop background loading</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>\};</p>\
+<p class="p2"><br></p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>openVideoModal.addEventListener('click', openModal);</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>closeVideoModal.addEventListener('click', closeModal);</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>videoModalOverlay.addEventListener('click', closeModal);</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>// --- END Video Modal Logic ---</p>\
+<p class="p2"><br></p>\
+<p class="p2"><br></p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>analyzeButton.addEventListener('click', () =&gt; \{</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>const userIdea = ideaInput.value;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>if (!userIdea) \{</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>displayError("Please enter a business idea to analyze.");</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>return;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>\}</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>callGeminiApi(userIdea);</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>\});</p>\
+<p class="p2"><span class="Apple-converted-space">\'a0\'a0 \'a0 \'a0 \'a0 \'a0 \'a0</span></p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>ideaInput.addEventListener('keypress', (e) =&gt; \{</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>if (e.key === 'Enter') \{</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>analyzeButton.click();</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>\}</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>\});</p>\
+<p class="p2"><br></p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>const setButtonLoading = (isLoading) =&gt; \{</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>if (isLoading) \{</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>analyzeButton.disabled = true;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>analyzeIcon.classList.add('hidden');</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>loadingSpinner.classList.remove('hidden');</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>buttonText.textContent = 'Analyzing...';</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>\} else \{</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>analyzeButton.disabled = false;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>analyzeIcon.classList.remove('hidden');</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>loadingSpinner.classList.add('hidden');</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>buttonText.textContent = 'Analyze Idea';</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>\}</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>\};</p>\
+<p class="p2"><br></p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>const displayError = (message) =&gt; \{</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>analysisOutput.classList.add('hidden');</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>errorMessage.textContent = message || "An unknown error occurred. Please try again.";</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>errorMessage.classList.remove('hidden');</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>\};</p>\
+<p class="p2"><br></p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>const displayResults = (data) =&gt; \{</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>errorMessage.classList.add('hidden');</p>\
+<p class="p2"><span class="Apple-converted-space">\'a0\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0</span></p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>// Clear previous results</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>marketOutput.innerHTML = '';</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>risksOutput.innerHTML = '';</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>valuePropOutput.innerHTML = '';</p>\
+<p class="p2"><br></p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>// Populate Target Market</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>data.market.forEach(item =&gt; \{</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>const li = document.createElement('li');</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>li.textContent = item;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>marketOutput.appendChild(li);</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>\});</p>\
+<p class="p2"><br></p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>// Populate Potential Risks</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>data.risks.forEach(item =&gt; \{</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>const li = document.createElement('li');</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>li.textContent = item;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>risksOutput.appendChild(li);</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>\});</p>\
+<p class="p2"><br></p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>// Populate Value Prop</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>data.valueProp.forEach(item =&gt; \{</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>const li = document.createElement('li');</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>li.textContent = item;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>valuePropOutput.appendChild(li);</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>\});</p>\
+<p class="p2"><br></p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>analysisOutput.classList.remove('hidden');</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>// Scroll to results</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>analysisOutput.scrollIntoView(\{ behavior: 'smooth', block: 'center' \});</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>\};</p>\
+<p class="p2"><br></p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>const callGeminiApi = async (userIdea, retries = 3, delay = 1000) =&gt; \{</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>setButtonLoading(true);</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>analysisOutput.classList.add('hidden');</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>errorMessage.classList.add('hidden');</p>\
+<p class="p2"><br></p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>// --- Gemini API Configuration ---</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>const apiKey = ""; // Will be injected by the environment</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=$\{apiKey\}`;</p>\
+<p class="p2"><br></p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>const systemPrompt = `You are an expert business consultant and strategist, trained by a 30-year veteran of Bloomberg and CNBC.</p>\
+<p class="p1">Analyze the following business idea. Provide a concise, professional, and insightful analysis.</p>\
+<p class="p1">For each of the three categories (market, risks, valueProp), provide 2-3 bullet points.</p>\
+<p class="p1">The output MUST be in the requested JSON format.`;</p>\
+<p class="p2"><br></p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>const payload = \{</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>contents: [\{</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>parts: [\{ text: userIdea \}]</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>\}],</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>systemInstruction: \{</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>parts: [\{ text: systemPrompt \}]</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>\},</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>generationConfig: \{</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>responseMimeType: "application/json",</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>responseSchema: \{</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>type: "OBJECT",</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>properties: \{</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>"market": \{</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>"type": "ARRAY",</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>"items": \{ "type": "STRING" \}</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>\},</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>"risks": \{</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>"type": "ARRAY",</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>"items": \{ "type": "STRING" \}</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>\},</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>"valueProp": \{</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>"type": "ARRAY",</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>"items": \{ "type": "STRING" \}</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>\}</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>\},</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>required: ["market", "risks", "valueProp"]</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>\}</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>\}</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>\};</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>// --- End of API Configuration ---</p>\
+<p class="p2"><br></p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>try \{</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>const response = await fetch(apiUrl, \{</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>method: 'POST',</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>headers: \{</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>'Content-Type': 'application/json'</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>\},</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>body: JSON.stringify(payload)</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>\});</p>\
+<p class="p2"><br></p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>if (!response.ok) \{</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>// Handle rate limiting (429) and other errors</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>if (response.status === 429 &amp;&amp; retries &gt; 0) \{</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>await new Promise(res =&gt; setTimeout(res, delay));</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>return callGeminiApi(userIdea, retries - 1, delay * 2);</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>\}</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>throw new Error(`API Error: $\{response.status\} $\{response.statusText\}`);</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>\}</p>\
+<p class="p2"><br></p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>const result = await response.json();</p>\
+<p class="p2"><br></p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>if (result.candidates &amp;&amp; result.candidates.length &gt; 0 &amp;&amp;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>result.candidates[0].content &amp;&amp; result.candidates[0].content.parts &amp;&amp;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>result.candidates[0].content.parts.length &gt; 0) \{</p>\
+<p class="p2"><span class="Apple-converted-space">\'a0\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0</span></p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>const jsonText = result.candidates[0].content.parts[0].text;</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>const parsedData = JSON.parse(jsonText);</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>displayResults(parsedData);</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>\} else \{</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>throw new Error("Invalid response structure from API.");</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>\}</p>\
+<p class="p2"><br></p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>\} catch (error) \{</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>console.error("Gemini API call failed:", error);</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>displayError(error.message || "Failed to analyze idea. Please try again.");</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>\} finally \{</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>setButtonLoading(false);</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>\}</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 </span>\};</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 \'a0 \'a0 </span>\});</p>\
+<p class="p1"><span class="Apple-converted-space">\'a0 \'a0 </span>&lt;/script&gt;</p>\
+<p class="p2"><br></p>\
+<p class="p1">&lt;/body&gt;</p>\
+<p class="p1">&lt;/html&gt;</p>\
+<p class="p2"><br></p>\
+<p class="p2"><br></p>\
+<p class="p2"><br></p>\
+<p class="p2"><br></p>\
+<p class="p2"><br></p>\
+</body>\
+</html>}
